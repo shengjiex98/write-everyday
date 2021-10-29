@@ -14,7 +14,7 @@ Returns elements chosen from `x` if `condition` is true in the corresponding pos
 
 If only `condition` is provided, indices of its element that evaluates to true will be returned. It is equivalent to `np.asarray(condition).nonzero()`.
 
-#### `ndarray.where()`
+#### `ndarray.T`
 Shortcut for transposing an ndarray
 
 #### `numpy.random`
