@@ -3,6 +3,7 @@
 ## Frequently used syntaxes
 
 ### numpy
+#### `numpy.where()`
 ```python
 np.where(condition[, x, y])
 
@@ -13,10 +14,10 @@ Returns elements chosen from `x` if `condition` is true in the corresponding pos
 
 If only `condition` is provided, indices of its element that evaluates to true will be returned. It is equivalent to `np.asarray(condition).nonzero()`.
 
-```python
-ndarray.T           # transpose the array
-```
+#### `ndarray.where()`
+Shortcut for transposing an ndarray
 
+#### `numpy.random`
 ```python
 # returns a random int between 0 and n
 np.random.randint(n)
@@ -32,5 +33,6 @@ np.random.randn()
 np.random.randn(d0, d1, ...,dn)
 np.random.standard_normal(size=(d0, d1, ...,dn))
 ```
+Random generators
 
 ### tensorflow
