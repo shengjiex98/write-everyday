@@ -28,7 +28,7 @@ $$\Phi = e^{Ah}, \Gamma = \int_0^h e^{As}ds$$
 
 **Control law** (and control gain $K$) is considered a known priori. The equation with augmented state vector now becomes
 $$z[k+1]=(\Phi_a -\Gamma_a K)z[k]=\Phi_{cl}z[k] $$
-where $\Phi_{cl}$ is the closed-loop state-transition matrix and eigenvalues of $\Phi_{cl} are the poles of the system.
+where $\Phi_{cl}$ is the closed-loop state-transition matrix and eigenvalues of $\Phi_{cl}$ are the poles of the system.
 
 **Performance measures** include rise time, settling time, overshoot and input energy.
 
@@ -48,3 +48,8 @@ Using dynamic programming. Each iteration obtains task periods, processor utiliz
 
 ### Result
 $F=\Sigma_{\tau_i \in T}D_i^*$ and $F=\Sigma_{\tau_i \in T}D_i$ resulted in an identical outcome that is worse than naive approach (increase all task period by equal amount), while $F=\Sigma_{\tau_i \in T}\hat{D_i}$ showed superior results. (Equal to exhaustive search but uses 97.5% less time).
+
+## Extensions
+
+- (more ambitious) Behaviours such as overshoot, settling times instead of just poles (but no closed form solutions). Use linear temporal logic (LTL) formulae. Change periods and make sure the LTL formulae are still satisfied.
+- (more basic) Additional questions to ask: (1) non-dominant poles movement; non-critical system can move more; generally more concret parameters. (2) directly use metrics such as settling time in heuristics (but harder to incorperate)
