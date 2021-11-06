@@ -9,9 +9,15 @@
 
 - **Node.js**
 
-## Packages/Tools
+## Frameworks
+- Front end
+  - Angular
+  - Reach
+  - Vue.js
+- Back end
+  - Express.js
 
-### Development Tools
+## Development Tools
 - Package manager
   - **npm**: A package manager for Node.js. It has other useful functionalities for web development such as `npx` for running locally installed packages and remote packages, or `npm run` for automating common tasks by pre-defining them in the `scripts` section of `package.json`.
   - yarn
@@ -20,8 +26,13 @@
   - **webpack**
 - Transpiler
   - TypeScript Compiler
-  - Babel
+  - Babel: from new spec of JS (ES2015) to old JS with better compatibility.
 
-### Packages that becomes part of your application
+
+## Functional Packages
 - Utilities
   - Lodash
+
+## Not exactly sure yet
+- MongoDB (a database program)
+- GraphQL (a database API?)
