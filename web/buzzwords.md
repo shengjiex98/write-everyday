@@ -35,4 +35,4 @@
 
 ## Not exactly sure yet
 - MongoDB (a database program)
-- GraphQL (a database API?)
+- GraphQL (a database API? *NO*. It's a *web service API* that defines how the client retrives data from the web server.)
