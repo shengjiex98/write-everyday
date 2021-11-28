@@ -88,7 +88,7 @@ Solves linear matrix equation.
 np.linalg.solve(a, b)
 ```
 
-#### `numpy.unravel_index`
+#### `numpy.unravel_index()`
 Converts a flat index or array of flat indices into a tuple of coordinate arrays.
 
 ```python
@@ -97,6 +97,34 @@ np.unravel_index([22, 41, 37], (7,6))
 ```
 
 ### tensorflow
+
+#### `tf.gather()`
+
+Gather slices from params axis axis according to indices.
+
+```python
+params = tf.constant([[0,    1.0,  2.0],
+                      [10.0, 11.0, 12.0],
+                      [20.0, 21.0, 22.0],
+                      [30.0, 31.0, 32.0]])
+
+tf.gather(params, indices=[3,1]).numpy()
+# result: [[30., 31., 32.],
+#           10., 11., 12.]]
+
+tf.gather(params, indices=[2,1], axis=1).numpy()
+# result: [[2.,   1.],
+#          [12., 11.],
+#          [22., 21.],
+#          [32., 31.]]
+```
+
+Can use repetitive indices to apply class specific operations. E.g. for Gausian Mixture Models (GMM)
+```python
+z = tf.transpose(tf.random.categorical([logits], N))
+x = tf.gather(means, z) + y * tf.gather(np.exp(lsigmas), z)
+```
+where `z` represents the latent variable, `logits[i]`, `means[i]` and `lsigmas[i]` represents the logit, mean and log-sigma of the i-th Gaussian respectively.
 
 ## Common mistakes
 
