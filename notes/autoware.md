@@ -66,7 +66,7 @@ $ touch .adehome
 ```
 
 Next, clone the Autoware.Auto repo:
-> For ADE to function, it must be properly configured. Autoware.Auto provides an .aderc file which is expected to exist in the current working directory, or in any parent directory. Additionally, default configuration values can be overridden by setting environment variables. See the ade --help output for more information about using environment variables to define the configuration. ([Autoware.Auto project page](https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/installation-ade.html))
+> For ADE to function, it must be properly configured. Autoware.Auto provides an `.aderc` file which is expected to exist in the current working directory, or in any parent directory. Additionally, default configuration values can be overridden by setting environment variables. See the `ade --help` output for more information about using environment variables to define the configuration. ([Autoware.Auto project page](https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/installation-ade.html))
 
 ```bash
 $ cd ~/adehome
