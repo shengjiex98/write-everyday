@@ -98,7 +98,7 @@ And that means you've successfully set up Autoware! If you want to return to you
 ```bash
 <username>@ade:~ $ exit
 ```
-should do the trick. Once you finish experimenting with it, you can run
+Once you finish experimenting with it, you can run
 ```bash
 # This command is NOT run in the ADE environment
 $ ade stop
