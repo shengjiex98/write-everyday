@@ -114,7 +114,7 @@ $ ls -l .aderc*
 
 To launch with a configuration file other than the default, run 
 ```bash
-$ ade --rc .aderc-amd64-foxy  start --update --enter
+$ ade --rc .aderc-amd64-foxy-lgsvl start --update --enter
 ```
 
 ## Next steps
