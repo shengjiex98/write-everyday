@@ -21,7 +21,7 @@ Nothing special needs to be done. Generally, using the latest versions of Window
     ```
 
 That's it. Open up a WSL shell and verify that GPU is recognized
-```bash
+```
 $ nvidia-smi
 Sat Jan 22 20:11:36 2022
 +-----------------------------------------------------------------------------+
