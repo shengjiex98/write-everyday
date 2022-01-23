@@ -49,6 +49,6 @@ Refer to the [official NVIDIA doc](https://docs.nvidia.com/datacenter/cloud-nati
 2. Install [Docker](https://docs.docker.com/engine/install/ubuntu/) (19.03 or newer). You might want to consider [add your user to the `docker` group](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user), as it will make things easier when using ade (otherwise you'll need to use `sudo` with ade commands).
 3. Install NVIDIA Container Toolkit, which enables docker containers to use Nvidia GPUs on the host system. This can be installed through the [`nvidia-docker2`](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) package.
 
-## Enable GPU in Docker containers run in WSL
+## Enable GPU in Docker containers with WSL2 backend
 
-This is where things get messy. There are conflicting information in the docs such as whether to install the `nvidia-docker2` package in WSL. Preliminary testing shows that running `docker run --gpus=all` in WSL works out-of-box without installing `nvidia-docker2`, but more testing needs to be done before this section can be more useful.
+The better way to run docker with WSL is to install Docker Desktop on Windows and enable [WSL2 backend](https://docs.docker.com/desktop/windows/wsl/), instead of installing Docker engine *within* WSL. Check out [this thread](https://stackoverflow.com/a/50160191) on StackOverflow. Since we've already set up WSL2 with GPU access, Docker containers now have GPU access too without having to install the `nvidia-docker2` package.
