@@ -4,7 +4,7 @@
 
 - **NVIDIA GPU Driver**
 - **NVIDIA CUDA toolkit**: enables the CUDA computing platform (this is what most ML libraries refer to when they talk about "using GPU"). Installation guide for [Ubuntu](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ubuntu-installation) and [WSL](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#wsl-installation).
-- **NVIDIA container tookit**: enables containers to access GPU. For docker, there's a package [`nvidia-docker2`](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) that covers all the packages one would need to work with Docker, including
+- **NVIDIA container tookit**: enables containers to access GPU. For docker, there's a package [`nvidia-docker2`](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) that covers all the packages one would need to work with Docker, [including](https://github.com/NVIDIA/nvidia-docker/issues/1268#issuecomment-632692949)
   - nvidia-container-toolkit
   - nvidia-container-runtime
   - libnvidia-container
