@@ -15,9 +15,13 @@ Nothing special needs to be done. Generally, using the latest versions of Window
 
 1. Update Windows to [Windows 11](https://microsoft.com/software-download/windows11) or [Windows 10, 21H2](https://microsoft.com/software-download/windows10)
 2. Install an [NVIDIA CUDA-enabled driver for WSL](https://developer.nvidia.com/cuda/wsl). Note that this driver is installed **on the host Windows OS**, not in WSL.
-3. [Set up WSL2](https://docs.microsoft.com/en-us/windows/wsl/install). Make sure the [kernel version is 5.10.43.3 or higher](https://docs.microsoft.com/en-us/windows/ai/directml/gpu-cuda-in-wsl#set-up-wsl-2). Run the following command in the WSL terminal:
+3. [Set up WSL2](https://docs.microsoft.com/en-us/windows/wsl/install). Make sure the kernel version is 5.10.43.3 or higher. To check kernel version, run the following command in the WSL terminal:
     ```bash
     $ cat /proc/version
+    ```
+    If you need to update the kernel, run the following command **in PowerShell**:
+    ```PowerShell
+    wsl.exe --update
     ```
 
 That's it. Open up a WSL shell and verify that GPU is recognized
