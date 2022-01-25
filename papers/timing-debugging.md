@@ -21,7 +21,7 @@ How to assess the change to the system dynamics? In this paper it is defined as 
 
 The **plant model** is linear and time-invariant (LTI).
 $$\dot{x}=Ax(t)+Bu(t)$$
-Where the deadline for control input is same as its sampling period, and control input is applied *at the deadline*. Therfore
+Where the deadline for control input is same as its sampling period, and control input is applied *at the deadline*. Therefore
 $$x[k+1]=\Phi x[k]+\Gamma u[k-1]$$
 where
 $$\Phi = e^{Ah}, \Gamma = \int_0^h e^{As}ds$$
