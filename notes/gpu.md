@@ -1,4 +1,4 @@
-# NVIDIA GPU & Docker & WSL
+# Setting up NVIDIA GPU
 
 ## What software does NVIDIA provide?
 
