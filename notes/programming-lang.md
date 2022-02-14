@@ -29,3 +29,8 @@ Applicative order always evaluate all arguments. In contrast, *normal order of e
 
 - Special forms: `if`, `and`, `or`, `define` and `lambda`
 - Macros
+
+### Environment & scope
+
+- Lexical scoping: extend the *defining* environment of function upon invocation
+- Dynamic scoping: extend the *current* environment of function upon invocation
