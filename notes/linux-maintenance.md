@@ -30,7 +30,17 @@
 
 ### Matlab
 - Create desktop entry
+
 - [Remember last working folder](https://www.mathworks.com/matlabcentral/answers/336249-initial-working-folder-not-working#answer_326563)
+  ```
+  Exec=matlab -desktop -useStartupFolderPref
+
+- Use correct video driver:
+  ```
+  Exec=env MESA_LOADER_DRIVER_OVERRIDE=i965 matlab -desktop
+  ```
+
+  
 
 ## Arch
 
