@@ -15,7 +15,7 @@ Returns elements chosen from `x` if `condition` is true in the corresponding pos
 If only `condition` is provided, indices of its element that evaluates to true will be returned. It is equivalent to `np.asarray(condition).nonzero()`. *Important: it will return one array for each dimension of the condition matrix.* So it might be required to use `np.where(condition)[0]` if the array has only one dimension.
 
 #### `ndarray.T`
-Shortcut for transposing an ndarray
+Shortcut for transposing an `ndarray`
 
 #### `numpy.random`
 Random number generator.
