@@ -9,3 +9,7 @@
 ### AMD Processors
 
 Install the *AMD Chipset Software* manually as it is currently not automatically installed by Windows.
+
+### Asus MB
+
+No sound: need to download the soundcard driver manually (IKR? in 2022?).
