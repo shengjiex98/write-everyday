@@ -2,6 +2,14 @@
 
 ## General
 
+### Network
+
+Cisco AnyConnect client seems to falsely claim that
+
+> The service provider in your current location is restricting access to the internet. You need to logon with the service provider before you can establish a VPN session. You can try this by visiting any website with your browser
+
+This issue can be resolved by check the `Disable Captive Portal Detection` setting in the AnyConnect menu.
+
 ### Storage
 
 - `du` ("disk usage", check files)
