@@ -1,5 +1,77 @@
 # Linux System Maintenance
 
+## Initial system setup
+
+### Configure bash
+```bash
+$ vim ~/.bashrc # You can use any editor e.g. nano in case vim is not your type
+$ vim ~/.bash_aliases # For all aliases
+```
+
+### Install apps from apt
+```bash
+$ sudo apt update
+$ sudo apt upgrade
+$ sudo apt install build-essential
+$ sudo apt install neovim
+```
+
+### Configure Git
+```bash
+$ git config --global user.email "shengjiex98@gmail.com"
+$ git config --global user.name "Shengjie Xu"
+$ git config --global core.editor "code --wait"
+$ git config --global -e
+```
+And add the following block to the file that is opened. (Also check out [Use VS Code as git editor](https://stackoverflow.com/a/36644561/9362448))
+```
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+```
+
+### Set up SSH
+```bash
+$ mkdir -p ~/.ssh
+$ ssh-keygen -t ecdsa -b 521
+$ cat ~/.ssh/id_ecdsa.pub # To use in e.g. GitHub SSH key authentication
+$ vim ~/.ssh/config       # To set custom Host aliases
+```
+
+### Set up Python environment with conda
+```bash
+$ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+$ bash Miniconda3-latest-Linux-x86_64.sh
+```
+Close and open a new terminal window for conda to activate, then enter
+```bash
+$ conda config --set auto_activate_base false
+```
+To remove the `(base)` prompt that is by default automatically activated all the time.
+
+Create a new environment (e.g., `torch` for PyTorch) like so
+```bash
+$ conda create --name torch --clone base
+$ conda activate torch
+$ conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+```
+
+### Set up Julia
+```bash
+$ wget https://julialang-s3.julialang.org/bin/linux/x64/1.7/julia-1.7.3-linux-x86_64.tar.gz
+$ tar zxvf julia-1.7.3-linux-x86_64.tar.gz
+$ sudo cp -r julia-1.7.3 /opt/
+$ sudo ln -s /opt/julia-1.7.3/bin/julia /usr/local/bin/julia
+```
+
+### Set up Node environment
+
+Look up the newest version of [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) before using the following command (otherwise it might be an older version)
+```bash
+$ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```
+
 ## General
 
 ### Network
@@ -21,7 +93,7 @@ This issue can be resolved by check the `Disable Captive Portal Detection` setti
 - Use `systemctl start/stop/enable tlp.service` to start/stop/enable tlp
 - Use `tlp-stat -b` to check battery status
 
-### Sleep & Hibernation
+### Sleep & hibernation
 
 - For ThinkPad laptops: set "Sleep Mode" in UEFI to `Linux`.
 - To set up hibernation in Ubuntu, find out the UUID of the partition `swapfile` is on as well as its file offset (first number in `physical_offset`. In this case `4974592`). Then add these information to `/etc/default/grub` in the `GRUB_CMDLINE_LINUX_DEFAULT` line.
