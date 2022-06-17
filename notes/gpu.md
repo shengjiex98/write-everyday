@@ -3,7 +3,7 @@
 ## What software does NVIDIA provide?
 
 - **NVIDIA GPU Driver**
-- **NVIDIA CUDA toolkit**: enables the CUDA computing platform (this is what most ML libraries refer to when they talk about "using GPU"). Installation guide for [Ubuntu](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ubuntu-installation) and [WSL](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#wsl-installation).
+- **NVIDIA CUDA toolkit**: enables the CUDA computing platform (this is what most ML libraries refer to when they talk about "using GPU"). Installation guide for [Ubuntu](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ubuntu-installation) and [WSL](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#wsl-installation). Alternatively, this can be installed by `conda` alongside ML frameworks.
 - **NVIDIA container tookit**: enables containers to access GPU. For docker, there's a package [`nvidia-docker2`](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) that covers all the packages one would need to work with Docker, [including](https://github.com/NVIDIA/nvidia-docker/issues/1268#issuecomment-632692949)
   - nvidia-container-toolkit
   - nvidia-container-runtime
@@ -37,7 +37,7 @@ Sat Jan 22 20:11:36 2022
 ...
 ```
 
-Optionally, if you want to use CUDA within WSL, then the NVIDIA CUDA toolkit must be installed **on WSL**. Make sure to not install the normal `cuda` package since it includes an NVIDIA driver for Linux that will conflict with the Windows driver we installed in step 2. Refer to [here](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#wsl-installation) for how to correctly set up CUDA. Alternatively, use `conda` to install CUDA alongside ML frameworks.
+Optionally, if you want to use CUDA within WSL, then the NVIDIA CUDA toolkit must be installed **on WSL**. Make sure to not install the `cuda-drivers` package since it includes an NVIDIA driver for Linux and will conflict with the Windows driver we installed in step 2. Refer to [here](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#wsl-installation) for how to correctly set up CUDA. Alternatively, use `conda` to install CUDA alongside ML frameworks.
 
 ## Enable GPU in Docker (Linux only)
 
