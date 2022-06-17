@@ -1,8 +1,9 @@
 # WifiEye
 
 ## Set up nexmon and nexmon_csi
-**make sure kernel version is correct. Also will need corresponding kernel headers**. To check for kernel headers, look for `/lib/modules/$(uname -r)/build/`
+- **make sure kernel version is correct. Also will need corresponding kernel headers**. To check for kernel headers, look for `/lib/modules/$(uname -r)/build/`
 To get a specific version of kernel, use [`rpi-update`](https://github.com/raspberrypi/rpi-update) with hashes from [`rpi-firmware`](https://github.com/raspberrypi/rpi-firmware). To get specific version of kernel headers, use [`rpi-source`](https://github.com/RPi-Distro/rpi-source).
+- Automatically install firmware on Pi startup: [link](https://learn.sparkfun.com/tutorials/how-to-run-a-raspberry-pi-program-on-startup/method-1-rclocal).
 
 ## Use WifiEye server and studio
 
