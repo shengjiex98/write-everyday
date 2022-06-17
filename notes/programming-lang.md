@@ -1,11 +1,22 @@
-- [What a genius solution!](#what-a-genius-solution)
-- [Lexical (tokenization)](#lexical-tokenization)
-- [Syntactic (parsing)](#syntactic-parsing)
-- [Semantic (evaluation)](#semantic-evaluation)
-  - [Applicative order](#applicative-order)
-  - [Non-applicative order](#non-applicative-order)
-  - [Environment & scope](#environment--scope)
-- [Unification](#unification)
+- [Learning languages](#learning-languages)
+  - [Julia](#julia)
+- [COMP 524](#comp-524)
+  - [What a genius solution!](#what-a-genius-solution)
+  - [Lexical (tokenization)](#lexical-tokenization)
+  - [Syntactic (parsing)](#syntactic-parsing)
+  - [Semantic (evaluation)](#semantic-evaluation)
+    - [Applicative order](#applicative-order)
+    - [Non-applicative order](#non-applicative-order)
+    - [Environment & scope](#environment--scope)
+  - [Unification](#unification)
+
+# Learning languages
+
+## Julia
+
+- Julia's functions **does not** belong to objects. I.e., use `enqueue!(q, item)` instead of `q.enqueue!(item)`. This has the advantage that all arguments of a function call are used to determine which implementation of the function (*method*) is used instead of just the `self` argument like in other OOP. This procress of determining which method to use is called *dispatch*.
+
+# COMP 524
 
 ## What a genius solution!
 Append two lists in SML
