@@ -16,6 +16,7 @@
 
 - Julia's functions **does not** belong to objects. I.e., use `enqueue!(q, item)` instead of `q.enqueue!(item)`. This has the advantage that all arguments of a function call are used to determine which implementation of the function (*method*) is used instead of just the `self` argument like in other OOP. This procress of determining which method to use is called *dispatch*.
 - Julia stores n-d arrays with **first dimension** consecutive in memory. Check out [this](https://discourse.julialang.org/t/for-i-1-m-j-1-n-discrepancy-loop-vs-comprehension-generator/75659/25) discussion on the Julia discourse (and [my answer](https://discourse.julialang.org/t/for-i-1-m-j-1-n-discrepancy-loop-vs-comprehension-generator/75659/26?u=shengjiex98)). Also [Why column major?](https://discourse.julialang.org/t/why-column-major/24374/30).
+- [String interpolation](https://docs.julialang.org/en/v1/manual/strings/#string-interpolation) in Julia: `"Hello, $name"` or `"9+2 = $(9+2)"`.
 
 # COMP 524
 
