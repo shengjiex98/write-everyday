@@ -4,6 +4,8 @@
 
 *Louqe Ghost S1* has standoffs that are too small and won't support certain motherboards correctly =_= (fixed in Mk III)
 
+If the *graphics card* is not properly seated in the PCIE slot there could be random black screens with `dwm.exe` crushing (evident by EventID 1000 in Event Viewer). Reseating the graphics card might solve the problem.
+
 ## Drivers and software
 
 ### AMD Processors
